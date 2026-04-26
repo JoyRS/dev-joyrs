@@ -1,0 +1,44 @@
+{
+  "languages": [
+    "TypeScript",
+    "JavaScript",
+    "Python"
+  ],
+  "backend": [
+    "Node.js",
+    "NestJS",
+    "Django"
+  ],
+  "architecture": [
+    "Microservicios",
+    "Sistemas event-driven",
+    "APIs de alto rendimiento"
+  ],
+  "messaging": [
+    "NATS",
+    "WebSockets"
+  ],
+  "data": [
+    "PostgreSQL",
+    "Redis",
+    "MongoDB",
+    "MySQL"
+  ],
+  "enterprise": [
+    "Integración SAP",
+    "Sistemas legados"
+  ],
+  "cloud": [
+    "AWS",
+    "DigitalOcean",
+    "Oracle Cloud",
+    "GCP",
+    "Cloudflare — mejora y configuración"
+  ],
+  "tools": [
+    "Docker",
+    "Kubernetes",
+    "CI/CD",
+    "Git"
+  ]
+}

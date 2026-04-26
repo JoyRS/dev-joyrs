@@ -1,0 +1,194 @@
+{
+  "name": "Cristhian Joy Reis Serrín",
+  "headline": "Backend Lead / Cloud Engineer",
+  "location": "Arequipa, Perú",
+  "emails": [
+    { "label": "Albatros", "href": "mailto:cristhian.reis@albatrosservices.com" },
+    { "label": "Personal", "href": "mailto:cristhianjoy@gmail.com" }
+  ],
+  "profiles": [{ "label": "GitHub", "href": "https://github.com/JoyRS" }],
+  "focus": [
+    "Diseño de sistemas distribuidos",
+    "Optimización de performance",
+    "Arquitecturas resilientes",
+    "Simplicidad sobre complejidad"
+  ],
+  "summary": [
+    "Backend Lead / Cloud Engineer especializado en sistemas distribuidos de alta concurrencia. Diseño arquitecturas que procesan miles de eventos diarios y escalan a cientos de miles de usuarios en producción.",
+    "Experiencia liderando plataformas Ecommerce y sistemas empresariales, combinando Node.js, TypeScript y NestJS con arquitecturas event-driven usando NATS y WebSockets.",
+    "Me enfoco en performance, resiliencia y simplicidad: transformar sistemas complejos en soluciones mantenibles, eficientes y listas para escalar."
+  ],
+  "projects": [
+    {
+      "name": "Red neuronal 7 → 4",
+      "description": "Conversión de representaciones digitales (7 bits) a cadenas de 4 bits; experimento en Python sobre codificación y validación de salidas.",
+      "stack": ["Python"],
+      "highlights": [
+        "Red feedforward y procesamiento por lotes",
+        "Enfoque en claridad del pipeline de datos"
+      ],
+      "repo": "https://github.com/JoyRS/RedNeuronal-7-4"
+    },
+    {
+      "name": "GitHub profile (JoyRS)",
+      "description": "README y configuración del perfil; punto de entrada a repos y experimentos públicos.",
+      "stack": ["Markdown"],
+      "highlights": ["Presentación clara", "Enlaces a trabajo destacado"],
+      "repo": "https://github.com/JoyRS/JoyRS"
+    },
+    {
+      "name": "Plataforma ecommerce de alto tráfico",
+      "description": "Liderazgo técnico en backend y cloud para plataforma de consumo masivo (detalles bajo acuerdos de confidencialidad).",
+      "stack": ["Node.js", "TypeScript", "NestJS", "NATS", "PostgreSQL", "AWS"],
+      "highlights": [
+        "~8.000 pedidos/día en picos operativos",
+        "+500K usuarios en entornos productivos",
+        "Arquitectura event-driven y procesamiento asíncrono"
+      ],
+      "repo": null,
+      "note": "Sin repo público — alcance y arquitectura conversables en entrevista."
+    }
+  ],
+  "experience": [
+    {
+      "company": "Consultora Albatros Services Honduras",
+      "modality": "Remoto",
+      "roles": [
+        {
+          "title": "Backend Lead / Cloud Engineer",
+          "period": "Julio 2022 – Actualidad",
+          "bullets": [
+            "Diseño y liderazgo de arquitectura de microservicios que soporta ~8.000 pedidos/día y más de 500K usuarios en producción.",
+            "APIs REST de alto rendimiento con Node.js, TypeScript y NestJS; foco en latencia, observabilidad y disponibilidad.",
+            "Arquitectura event-driven con NATS y WebSockets para procesamiento asíncrono de alto volumen y tiempo real, reduciendo cuellos de botella en servicios críticos.",
+            "Envíos masivos y colas: desacoplamiento de picos de tráfico y mayor resiliencia ante fallos parciales.",
+            "Integración con SAP y bases relacionales/NoSQL; modelos de datos alineados a reporting y consistencia operativa.",
+            "Infraestructura cloud y prácticas de despliegue para equipos que operan la plataforma 24/7."
+          ]
+        },
+        {
+          "title": "Backend Engineer / Cloud Consultant",
+          "period": "Junio 2021 – Julio 2022",
+          "bullets": [
+            "Backend para ecommerce de alta disponibilidad; mejoras medibles en estabilidad de integraciones y tiempos de respuesta.",
+            "Servicios de integración entre sistemas internos, externos y SAP; menos fricción en flujos de pedido y catálogo.",
+            "Optimización de modelos y consultas en PostgreSQL; menor carga en lecturas frecuentes.",
+            "Despliegues, monitoreo y soporte en entornos cloud productivos."
+          ]
+        },
+        {
+          "title": "Backend Engineer / Cloud Consultant",
+          "period": "Septiembre 2020 – Junio 2021",
+          "bullets": [
+            "APIs REST acopladas a procesos de negocio; contratos estables para equipos frontend y partners.",
+            "Integraciones backend con SAP alineadas a reglas contables y logísticas.",
+            "Evolución continua de plataformas ecommerce en producción con despliegues controlados."
+          ]
+        },
+        {
+          "title": "Backend Developer",
+          "period": "Noviembre 2018 – Junio 2020",
+          "bullets": [
+            "Middlewares de integración para CloudSales; sincronización confiable entre canales.",
+            "Comunicación backend web/móvil con contratos claros y manejo de errores predecible.",
+            "PostgreSQL sobre AWS; backups, índices y consultas afinadas para operación diaria."
+          ]
+        },
+        {
+          "title": "Fullstack Developer",
+          "period": "Agosto 2018 – Octubre 2018",
+          "client": "Cliente: AMPM",
+          "bullets": [
+            "Portales de supervisión de tiendas con datos operativos en un solo lugar.",
+            "Dashboards, gráficas y reportes PDF para decisiones de campo.",
+            "Fullstack para visualización de KPIs con stack acorde a necesidades del cliente."
+          ]
+        }
+      ]
+    },
+    {
+      "company": "Net-Partners International",
+      "client": "Cliente: SIDERÚRGICA DEL PERÚ S.A.A",
+      "modality": "Remoto",
+      "roles": [
+        {
+          "title": "Backend Developer",
+          "period": "Julio 2019 – Marzo 2020",
+          "bullets": [
+            "Middleware de integración entre web, móvil y SAP; menos duplicidad de datos y reglas únicas de negocio.",
+            "Servicios en Python y Django con foco en trazabilidad y auditoría.",
+            "Sincronización multi-sistema con colas y reintentos donde el dominio lo exigía."
+          ]
+        }
+      ]
+    }
+  ],
+  "skills": [
+    "Arquitectura backend y microservicios a escala",
+    "APIs REST y contratos orientados a producto",
+    "Integraciones SAP y sistemas empresariales",
+    "Modelado, índices y performance en bases de datos",
+    "Cloud, observabilidad y operación en producción",
+    "De problemas complejos a soluciones simples y mantenibles"
+  ],
+  "education": {
+    "degree": "Ingeniería de Sistemas",
+    "school": "Universidad Católica de Santa María",
+    "location": "Arequipa, Perú",
+    "years": "2014 – 2019"
+  },
+  "certifications": [
+    "CCNA Switching & Routing – Introducción a Redes",
+    "CCNA Routing & Switching – Principios Básicos de Routing y Switching",
+    "CCNA Routing & Switching – Escalamiento de Redes",
+    "CCNA Routing & Switching – Conexión de Redes",
+    "Cisco Networking Academy – Introduction to Cybersecurity"
+  ],
+  "copy": {
+    "heroKicker": "// Portafolio · Backend, cloud & sistemas distribuidos",
+    "footerTag": "// Listo para escalar",
+    "heroStackAriaLabel": "Stack por dominio",
+    "focusHeading": "## Enfoque",
+    "focusLede": "/* Lo que busco en cada sistema que diseño o lidero. */",
+    "stackHeading": "## Stack",
+    "stackLede": "/* Agrupado por capas — arquitectura, no solo herramientas. */",
+    "educationWhereKeyword": "where:",
+    "certificationsHeading": "# Certificaciones",
+    "packageJsonComment": "// package.json — dependencias del proyecto",
+    "stackCategoryLabels": {
+      "languages": "Lenguajes",
+      "backend": "Backend & frameworks",
+      "architecture": "Arquitectura",
+      "messaging": "Mensajería & tiempo real",
+      "data": "Datos",
+      "enterprise": "Empresa & ERP",
+      "cloud": "Cloud",
+      "tools": "DevOps & tooling"
+    },
+    "sections": {
+      "perfil": {
+        "heading": "## Perfil profesional",
+        "lede": "/* Menos buzzwords, más sistemas que aguantan carga real. */"
+      },
+      "experiencia": {
+        "heading": "## Experiencia laboral",
+        "lede": "/* Impacto, escala y mejoras — no solo lista de tareas. */"
+      },
+      "proyectos": {
+        "heading": "## Proyectos",
+        "lede": "/* Código público + trabajo bajo NDA explicado sin romper confidencialidad. */"
+      },
+      "habilidades": {
+        "heading": "## Habilidades destacadas",
+        "lede": "/* Cómo trabajo, no solo qué herramientas toco. */"
+      },
+      "estudios": {
+        "heading": "## Estudios"
+      },
+      "contacto": {
+        "heading": "## Contacto",
+        "lede": "/* ¿Arquitectura, cloud o integraciones? Hablemos. */"
+      }
+    }
+  }
+}
