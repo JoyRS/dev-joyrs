@@ -47,7 +47,7 @@ export function IdeWindow({
             <span className="ide-traffic__dot ide-traffic__dot--g" />
           </div>
         </div>
-        <span className="ide-titlebar__title">cristhian-reis — Sublime Text</span>
+        <span className="ide-titlebar__title">cristhian-reis — workspace</span>
         <div className="ide-titlebar__end">
           <a href="#top" className="ide-titlebar__logo-link" aria-label="Ir al inicio (README.md)" title="Inicio">
             <img src="/favicon.png" alt="" className="ide-titlebar__logo" width={18} height={18} decoding="async" />
