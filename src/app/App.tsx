@@ -1,4 +1,6 @@
 /* Impacto, escala y mejoras — la UI solo enmarca eso; no sustituye al contenido. */
+/* Vercel: en Next.js sería @vercel/analytics/next; en Vite + React usar /react. */
+import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { EditorBody } from '../components/editor/EditorBody'
@@ -104,6 +106,7 @@ function App() {
           </footer>
         </IdeWindow>
       </div>
+      <Analytics />
       <SpeedInsights />
     </>
   )
