@@ -3,6 +3,7 @@ import { join } from 'node:path'
 import { defineConfig, loadEnv, type Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
+/* SEO directo: qué construyes y con qué enfoque — sin relleno ni keywords vacías. */
 const SEO_DESC =
   'Cristhian Joy Reis Serrín — Backend Lead / Cloud Engineer. Portafolio: sistemas distribuidos, event-driven y cloud.'
 

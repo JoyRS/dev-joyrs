@@ -1,3 +1,4 @@
+/* URLs por hash: compartibles y estáticas — menos framework, más enlaces que funcionan en prod. */
 import { useEffect } from 'react'
 import type { CvFileId } from '../config/cvFiles'
 import { isCvFileId } from '../config/cvFiles'

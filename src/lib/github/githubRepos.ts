@@ -5,6 +5,7 @@ import type {
   GitHubRepoDisplay,
 } from './types'
 
+/* Cliente API conservador: cache, rate limits y token opcional — tráfico real, no demos frágiles. */
 const API_BASE = 'https://api.github.com'
 const GITHUB_VERSION = '2022-11-28'
 const CACHE_PREFIX = 'gh:portafolio:repos'

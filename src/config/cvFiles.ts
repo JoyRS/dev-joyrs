@@ -4,6 +4,7 @@
  * - timeline, github → JSON (datos estructurados o feed remoto)
  * - package → manifiesto npm real
  */
+/* El explorador refleja cómo quieres que te lean — no solo árbol de archivos bonito. */
 export const CV_FILES = [
   { id: 'top', file: 'README.md', label: 'Inicio' },
   { id: 'perfil', file: 'profile.md', label: 'Perfil' },

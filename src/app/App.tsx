@@ -1,3 +1,4 @@
+/* Impacto, escala y mejoras — la UI solo enmarca eso; no sustituye al contenido. */
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { EditorBody } from '../components/editor/EditorBody'
 import { IdeWindow } from '../components/ide/IdeWindow'

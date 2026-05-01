@@ -40,12 +40,19 @@ export function IdeWindow({
   return (
     <div className="ide-window" role="application" aria-label="Vista estilo editor">
       <div className="ide-titlebar">
-        <div className="ide-traffic" aria-hidden="true">
-          <span className="ide-traffic__dot ide-traffic__dot--r" />
-          <span className="ide-traffic__dot ide-traffic__dot--y" />
-          <span className="ide-traffic__dot ide-traffic__dot--g" />
+        <div className="ide-titlebar__start">
+          <div className="ide-traffic" aria-hidden="true">
+            <span className="ide-traffic__dot ide-traffic__dot--r" />
+            <span className="ide-traffic__dot ide-traffic__dot--y" />
+            <span className="ide-traffic__dot ide-traffic__dot--g" />
+          </div>
         </div>
         <span className="ide-titlebar__title">cristhian-reis — Sublime Text</span>
+        <div className="ide-titlebar__end">
+          <a href="#top" className="ide-titlebar__logo-link" aria-label="Ir al inicio (README.md)" title="Inicio">
+            <img src="/favicon.png" alt="" className="ide-titlebar__logo" width={18} height={18} decoding="async" />
+          </a>
+        </div>
       </div>
 
       <div className="ide-tabbar-outer">

@@ -1,3 +1,4 @@
+/* Cada pestaña es una sección del mismo CV: navegación liviana, lectura en orden lógico. */
 import type { CvFileId } from '../../config/cvFiles'
 import { ContactView } from './views/ContactView'
 import { EducationView } from './views/EducationView'

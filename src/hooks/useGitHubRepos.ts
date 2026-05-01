@@ -1,3 +1,4 @@
+/* Proyectos públicos como muestra tangible; si la API falla, la sección sigue honesta. */
 import { useEffect, useState } from 'react'
 import {
   clearGitHubRepoCache,
