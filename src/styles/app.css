@@ -211,6 +211,11 @@
   z-index: 1;
 }
 
+/* Botón Explorador junto a pestañas: solo móvil/tablet compacto (≤900px). */
+.ide-tab-nav.ide-tabbar-explorer {
+  display: none;
+}
+
 .ide-tab-wrap {
   display: flex;
   align-items: stretch;
@@ -1273,20 +1278,85 @@
   outline-offset: 1px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 900px) {
   .ide-app {
     padding: 0;
+    overflow-x: clip;
   }
 
   .ide-window {
+    --ide-drawer-top: 78px;
     min-height: 100svh;
     border-radius: 0;
     border: none;
     box-shadow: none;
+    overflow-x: clip;
+    overflow-y: auto;
+  }
+
+  .ide-tabbar-explorer.ide-tab-nav {
+    display: inline-flex;
+    width: 36px;
+    font-size: 1rem;
+  }
+
+  .ide-tabbar-explorer.ide-tab-nav.ide-tabbar-explorer--active {
+    color: var(--ide-tab-accent);
+    box-shadow: inset 2px 0 0 var(--ide-tab-accent);
+  }
+
+  .ide-editor-wrap {
+    margin-left: 0;
+  }
+
+  /* Sin banda de color distinta: números de línea en el mismo fondo que el editor. */
+  .ide-gutter {
+    background: var(--ide-editor-bg);
+    border-right-color: color-mix(in srgb, var(--ide-gutter-separator) 45%, transparent);
   }
 
   .ide-sidebar {
-    display: none;
+    display: flex;
+    position: fixed;
+    top: var(--ide-drawer-top);
+    bottom: 0;
+    left: 0;
+    width: min(288px, 88vw);
+    z-index: 120;
+    transform: translateX(-105%);
+    transition:
+      transform 0.22s ease,
+      visibility 0s linear 0.22s;
+    box-shadow: none;
+    border-right: 1px solid transparent;
+    pointer-events: none;
+    visibility: hidden;
+  }
+
+  .ide-sidebar.ide-sidebar--mobile-open {
+    transform: translateX(0);
+    box-shadow: 8px 0 32px rgba(0, 0, 0, 0.42);
+    pointer-events: auto;
+    visibility: visible;
+    transition:
+      transform 0.22s ease,
+      visibility 0s linear 0s;
+    border-right: 1px solid var(--ide-sidebar-border);
+  }
+
+  .ide-explorer-backdrop {
+    position: fixed;
+    top: var(--ide-drawer-top);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 110;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.42);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .ide-titlebar__title {
@@ -1299,5 +1369,11 @@
 
   .ide-tab-wrap {
     scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 900px) and (prefers-reduced-motion: reduce) {
+  .ide-sidebar {
+    transition: none;
   }
 }

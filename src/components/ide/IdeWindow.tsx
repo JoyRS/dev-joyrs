@@ -1,4 +1,5 @@
-import type { RefObject, ReactNode } from 'react'
+import { useEffect, useState, type ReactNode, type RefObject } from 'react'
+import { VscFiles } from 'react-icons/vsc'
 import { CV_FILES, getFileEntry, statusLanguageForFile, type CvFileId } from '../../config/cvFiles'
 import { IDE_THEMES, type IdeThemeId } from '../../config/ideThemes'
 import { FileIcon } from '../icons/FileIcon'
@@ -36,6 +37,38 @@ export function IdeWindow({
   children,
 }: Props) {
   const activeFile = getFileEntry(activeTab)
+  const [mobileExplorerOpen, setMobileExplorerOpen] = useState(false)
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 901px)')
+    const closeOnDesktop = () => {
+      if (mq.matches) setMobileExplorerOpen(false)
+    }
+    closeOnDesktop()
+    mq.addEventListener('change', closeOnDesktop)
+    return () => mq.removeEventListener('change', closeOnDesktop)
+  }, [])
+
+  useEffect(() => {
+    if (!mobileExplorerOpen) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMobileExplorerOpen(false)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [mobileExplorerOpen])
+
+  useEffect(() => {
+    if (!mobileExplorerOpen) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prev
+    }
+  }, [mobileExplorerOpen])
+
+  const closeMobileExplorer = () => setMobileExplorerOpen(false)
+  const toggleMobileExplorer = () => setMobileExplorerOpen((o) => !o)
 
   return (
     <div className="ide-window" role="application" aria-label="Vista estilo editor">
@@ -56,6 +89,19 @@ export function IdeWindow({
       </div>
 
       <div className="ide-tabbar-outer">
+        <button
+          type="button"
+          className={`ide-tab-nav ide-tabbar-explorer${mobileExplorerOpen ? ' ide-tabbar-explorer--active' : ''}`}
+          aria-expanded={mobileExplorerOpen}
+          aria-controls="ide-explorer-drawer"
+          onClick={toggleMobileExplorer}
+          title="Explorador"
+          aria-label={
+            mobileExplorerOpen ? 'Cerrar panel Explorador' : 'Abrir panel Explorador'
+          }
+        >
+          <VscFiles size={18} aria-hidden />
+        </button>
         <button
           type="button"
           className="ide-tab-nav ide-tab-nav--prev"
@@ -117,7 +163,20 @@ export function IdeWindow({
       </div>
 
       <div className="ide-main">
-        <aside className="ide-sidebar" aria-label="Explorador de archivos">
+        {mobileExplorerOpen ? (
+          <button
+            type="button"
+            className="ide-explorer-backdrop"
+            aria-label="Cerrar explorador"
+            onClick={closeMobileExplorer}
+          />
+        ) : null}
+
+        <aside
+          id="ide-explorer-drawer"
+          className={`ide-sidebar ${mobileExplorerOpen ? 'ide-sidebar--mobile-open' : ''}`}
+          aria-label="Explorador de archivos"
+        >
           <div className="ide-sidebar__header">EXPLORER</div>
           <div className="ide-sidebar__tree">
             <div className="ide-folder">
@@ -135,6 +194,7 @@ export function IdeWindow({
                       onClick={(e) => {
                         e.preventDefault()
                         onFocusFile(item.id)
+                        closeMobileExplorer()
                       }}
                     >
                       <FileIcon fileName={item.file} size={15} className="ide-file__ico" />
